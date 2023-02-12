@@ -19,6 +19,7 @@ public class Necessiteux  {
     private String phoneNumber;
     private String email;
     private String description;
+    private String titre;
     @Enumerated(EnumType.STRING)
     private TypeAide typeAide;
 

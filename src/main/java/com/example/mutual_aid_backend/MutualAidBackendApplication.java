@@ -20,9 +20,9 @@ public class MutualAidBackendApplication {
     CommandLineRunner start(NecessiteuxRepository necessiteuxRepository, BenevoleRepository benevoleRepository){
 
         return args -> {
-            necessiteuxRepository.save(new Necessiteux(null, "Nabil", "Bouzid", "Tunis", "12345678","nabil@gmail.com","je suis un necessiteux", TypeAide.NEEDFOOD));
-            necessiteuxRepository.save(new Necessiteux(null, "Anass", "lalaoui", "casa", "0352155541","Anass@gmail.com","je suis un necessiteux",TypeAide.NEEDMEDICINE));
-            necessiteuxRepository.save(new Necessiteux(null, "simo", "boukader", "rabat", "12345678","simo@gmail.com","je suis un necessiteux",TypeAide.NEEDCLOTHES));
+            necessiteuxRepository.save(new Necessiteux(null, "Nabil", "Bouzid", "Tunis", "12345678","nabil@gmail.com","je suis un necessiteux","titre 1", TypeAide.NEED_FOOD));
+            necessiteuxRepository.save(new Necessiteux(null, "Anass", "lalaoui", "casa", "0352155541","Anass@gmail.com","je suis un necessiteux","titre 2",TypeAide.NEED_MEDICINE));
+            necessiteuxRepository.save(new Necessiteux(null, "simo", "boukader", "rabat", "12345678","simo@gmail.com","je suis un necessiteux","titre 3",TypeAide.NEED_CLOTHES));
             benevoleRepository.save(new Benevole(null, "Nabil", "Bouzid", "Tunis", "12345678","nabil@gmail.com","je suis un necessiteux"));
             benevoleRepository.save(new Benevole(null, "anass", "Bouzid", "Tunis", "12345678","anass@gmail.com","je suis un necessiteux"));
             benevoleRepository.save(new Benevole(null, "simo", "Bouzid", "Tunis", "12345678","simo@gmail.com","je suis un necessiteux"));

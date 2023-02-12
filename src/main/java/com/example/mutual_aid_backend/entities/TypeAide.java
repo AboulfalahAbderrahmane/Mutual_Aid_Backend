@@ -1,9 +1,9 @@
 package com.example.mutual_aid_backend.entities;
 
 public enum TypeAide {
-    NEEDMONEY,
-    NEEDFOOD,
-    NEEDCLOTHES,
-    NEEDMEDICINE,
-    NEEDOTHERS
+    NEED_MONEY,
+    NEED_FOOD,
+    NEED_CLOTHES,
+    NEED_MEDICINE,
+    NEED_OTHERS
 }
