@@ -1,6 +1,7 @@
 package com.example.mutual_aid_backend.web;
 
 import com.example.mutual_aid_backend.entities.Necessiteux;
+import com.example.mutual_aid_backend.entities.TypeAide;
 import com.example.mutual_aid_backend.repositories.NecessiteuxRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,5 +37,9 @@ public class NecessiteuxRest {
         necessiteux.setId(id);
         return necessiteuxRepository.save(necessiteux);
     }
+
+    @GetMapping("/findbyTypeAide")
+    public List<Necessiteux> findbyTypeAide(@RequestParam(name = "typeAide",defaultValue = "NEED_CLOTHES") TypeAide typeAide){
+        System.out.println("typeAide: " + typeAide);    return necessiteuxRepository.filtrer(typeAide);}
 
 }
